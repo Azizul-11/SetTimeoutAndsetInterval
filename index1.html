@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>SetTimeout</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+     setTimeout(function () {
+      console.log("Ramiz");
+    }, 2000);
+    // setTimeout do work just 1 time every given second
+
+    const sayRamiz = function () {
+      console.log("Ramiz");
+    };
+
+    setTimeout(sayRamiz, 2000);
+
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "Hello How are you?";
+    };
+
+  const chaneMe=  setTimeout(changeText,2000)
+
+
+   
+
+
+    // To stop setTimeout we use ClearTimeout
+    // to prevent setTimeout's Action from firing
+
+
+    document.querySelector("#stop").addEventListener("click",()=>{
+        clearTimeout(chaneMe)
+        console.log("Stopped");
+    })
+   
+  </script>
+</html>
